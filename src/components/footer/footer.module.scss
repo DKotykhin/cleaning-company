@@ -1,0 +1,78 @@
+@import "constants/constants.scss";
+
+.footer {
+    width: 100%;
+    background-color: #012239;
+    height: 375px;
+    .container {
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        padding: 68px 40px;
+        .logo {
+            img {
+                cursor: pointer;
+            }
+            p {
+                color: #c7c7c7;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 20px;
+            }
+        }
+        .column {
+            font-size: 22px;
+            font-weight: 500;
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .lastColumn {
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+                font-size: 22px;
+                font-weight: 500;
+            }
+            .socials img {
+                margin-right: 19px;
+            }
+            .phone {
+                display: flex;
+                align-items: center;
+                a {
+                    margin: 3px 0 0 13px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            .mail {
+                display: flex;
+                align-items: center;
+                a {
+                    margin-left: 13px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .line {
+        border: 1px solid $grey;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .right {
+        color: #c7c7c7;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 24px 0;
+    }
+}
