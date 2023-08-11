@@ -14,29 +14,6 @@
         .burger {
             display: none;
         }
-        @media (max-width: 1200px) {
-            height: 110px;
-            padding: 0 35px;
-            .logo {
-                width: 120px;
-            }
-            .burger {
-                display: block;
-                cursor: pointer;
-                @media (max-width: 767px) {
-                    width: 28px;
-                    height: 28px;
-                }
-            }
-        }
-        @media (max-width: 767px) {
-            height: 69px;
-            padding: 0 20px;
-            .logo {
-                width: 73px;
-                height: 26px;
-            }
-        }
         .menu {
             display: flex;
             justify-content: space-between;
@@ -45,26 +22,23 @@
             font-size: 22px;
             font-weight: 500;
             color: $white;
-            li {
+            a {
                 cursor: pointer;
                 margin-left: 60px;
                 white-space: nowrap;
             }
-            li:last-child {
+            a:last-child {
                 @include button;
                 width: 189px;
                 height: 47px;
                 span {
-                    width: 98px;                    
+                    width: 98px;
                     font-size: 22px;
                     font-weight: 700;
                 }
             }
             .active {
                 color: $light_blue;
-            }
-            @media (max-width: 1200px) {
-                display: none;
             }
         }
         .burger_menu {
@@ -74,15 +48,9 @@
             position: absolute;
             top: 0;
             right: 0;
-            @media (max-width: 767px) {
-                width: 167px;
-                height: 301px;
-            }
+            font-size: 18px;
             .burger_container {
                 padding: 24px 47px;
-                @media (max-width: 767px) {
-                    padding: 19px 21px;
-                }
                 img {
                     cursor: pointer;
                 }
@@ -93,45 +61,77 @@
                 padding: 62px 0;
                 font-size: 18px;
                 font-weight: 700;
-                @media (max-width: 767px) {
-                    font-size: 12px;
-                    padding: 32px 0;
-                }
-                li {
+                a {
                     cursor: pointer;
-                }
-                li:not(:last-child) {
-                    margin-bottom: 40px;
-                    @media (max-width: 767px) {
-                        margin-bottom: 20px;
+                    p {
+                        margin-bottom: 40px;
                     }
                 }
-                li:last-child {
+                a:last-child {
                     @include button;
                     width: 167px;
                     height: 47px;
                     margin-top: 81px;
-                    @media (max-width: 767px) {
-                        width: 114px;
-                        height: 32px;
-                        margin-top: 32px;
-                    }
                     span {
-                        width: 86px;                        
+                        width: 86px;
                         font-size: 22px;
                         font-weight: 700;
                         color: $white;
-                        @media (max-width: 767px) {
-                            font-size: 10px;
-                            text-align: center;
-                            
-                        }
                     }
                 }
             }
         }
         .burger_menu_close {
             display: none;
+        }
+        @media screen and (min-width: $full_bp) {
+            .burger_menu {
+                display: none;
+            }
+        }
+        @media screen and (max-width: $tablet_bp) {
+            .menu {
+                display: none;
+            }
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+        }
+        @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+            height: 110px;
+            padding: 0 35px;
+        }
+        @media screen and (max-width: $mobile_bp) {
+            height: 69px;
+            padding: 0 20px;
+            .burger {
+                width: 28px;
+                height: 28px;
+            }
+            .burger_menu {
+                width: 167px;
+                height: 301px;
+                .burger_container {
+                    padding: 19px 21px;
+                }
+                .burger_menu_list {
+                    font-size: 12px;
+                    padding: 32px 0;
+                    a p {
+                        margin-bottom: 20px;
+                    }
+                    a:last-child {
+                        width: 114px;
+                        height: 32px;
+                        margin-top: 32px;
+                        span {
+                            font-size: 10px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
         }
     }
 }

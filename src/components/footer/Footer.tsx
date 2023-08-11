@@ -1,90 +1,92 @@
 "use client";
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Link from 'next/link';
-
-import logo from '/public/logo.svg';
-import facebook from '/public/icons/facebook.svg';
-import instagram from '/public/icons/instagram.svg';
-import phone from '/public/icons/phone.svg';
-import mail from '/public/icons/mail.svg';
 
 import styles from './footer.module.scss';
 
 const Footer = () => {
 
-    const router = useRouter();
-
     return (
         <div className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Image
-                        src={logo}
-                        alt={'logo Cleaning company'}
-                        width={206}
-                        priority
-                        onClick={() => router.push('/')}
-                    />
+                    <Link href={'/'}>
+                        <Image
+                            src={'/logo.svg'}
+                            alt={'logo Cleaning company'}
+                            width={206}
+                            height={73}
+                            priority
+                            className='logo'
+                        />
+                    </Link>
                     <p>Commercial Cleaning Company</p>
                 </div>
                 <div className={styles.column}>
-                    <div onClick={() => router.push('/')}>Home</div>
-                    <div onClick={() => router.push('/services')}>Services</div>
-                    <div onClick={() => router.push('/industries')}>Industries</div>
+                    <Link href={'/'}>Home</Link>
+                    <Link href={'/services'}>Services</Link>
+                    <Link href={'/industries'}>Industries</Link>
                 </div>
                 <div className={styles.column}>
-                    <div onClick={() => router.push('/aboutUs')}>About Us</div>
-                    <div onClick={() => router.push('/contacts')}>Contacts</div>
-                    <div onClick={() => router.push('/contacts')}>Help</div>
+                    <Link href={'/aboutUs'}>About Us</Link>
+                    <Link href={'/contacts'}>Contacts</Link>
+                    <Link href={'/contacts'}>Help</Link>
                 </div>
                 <div className={styles.lastColumn}>
                     <p>Socials</p>
                     <div className={styles.socials}>
                         <Link href={'https://google.com'} target='_blank'>
                             <Image
-                                src={facebook}
+                                src={'/icons/facebook.svg'}
                                 alt={'facebook icon'}
                                 width={24}
+                                height={24}
                             />
                         </Link>
                         <Link href={'https://google.com'} target='_blank'>
                             <Image
-                                src={instagram}
+                                src={'/icons/instagram.svg'}
                                 alt={'instagram icon'}
                                 width={24}
+                                height={24}
                             />
                         </Link>
                     </div>
                     <div className={styles.phone}>
                         <Image
-                            src={phone}
-                            alt={'phone icon'}                           
+                            src={'/icons/phone.svg'}
+                            alt={'phone icon'}
+                            width={24}
+                            height={24}
                         />
                         <a href="tel:2958675950">+2958675950</a>
                     </div>
                     <div className={styles.mail}>
                         <Image
-                            src={mail}
+                            src={'/icons/mail.svg'}
                             alt={'mail icon'}
+                            width={24}
+                            height={24}
                         />
                         <a href="mailto:pristine12@gmail.com">pristine12@gmail.com</a>
                     </div>
                     <div className={styles.socials_mobile}>
                         <a href="tel:2958675950">
                             <Image
-                                src={phone}
+                                src={'/icons/phone.svg'}
                                 alt={'phone icon'}
                                 width={24}
+                                height={24}
                             />
                         </a>
                         <a href="mailto:pristine12@gmail.com">
                             <Image
-                                src={mail}
+                                src={'/icons/mail.svg'}
                                 alt={'mail icon'}
                                 width={24}
+                                height={24}
                             />
                         </a>
                     </div>

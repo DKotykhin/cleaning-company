@@ -16,7 +16,7 @@ export const generalMetaData: Metadata = {
 };
 
 export const mainPageMetaData: Metadata = {
-    title: "Cleaning company",
+    title: "Cleaning company - Home",
     description: "",
     keywords: [],
     metadataBase: new URL("https://google.com"),

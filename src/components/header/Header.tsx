@@ -1,69 +1,77 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-
-import logo from '/public/logo.svg';
-import menu from '/public/icons/menu.svg';
-import x from '/public/icons/x.svg';
+import Link from 'next/link';
 
 import styles from './header.module.scss';
 
+const navLinks = [
+    {
+        name: 'Home',
+        url: '/',
+    },
+    {
+        name: 'Services',
+        url: '/services',
+    },
+    {
+        name: 'Industries',
+        url: '/industries',
+    },
+    {
+        name: 'About us',
+        url: '/aboutUs',
+    },
+];
 
 const Header = () => {
 
-    const router = useRouter();
     const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState(false);
+
+    const handleKeydown = (e: any) => {        
+        if (e.code === 'Escape') setOpenMenu(false);
+    };
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeydown);
+
+        return () => window.removeEventListener("keydown", handleKeydown);
+    }, []);
 
     return (
         <nav className={styles.header}>
             <div className={styles.container}>
+                <Link href={'/'}>
+                    <Image
+                        src={'/logo.svg'}
+                        alt={'logo Cleaning company'}
+                        width={206}
+                        height={73}
+                        priority
+                        className='logo'
+                    />
+                </Link>
+                <div className={styles.menu}>
+                    {navLinks.map(item => (
+                        <Link href={item.url} key={item.name}>
+                            <span className={(pathname === item.url) ? styles.active : ''}>
+                                {item.name}
+                            </span>
+                        </Link>
+                    ))}
+                    <Link href={'/contacts'}>
+                        <span>
+                            Contacts
+                        </span>
+                    </Link>
+                </div>
                 <Image
-                    src={logo}
-                    alt={'logo Cleaning company'}
-                    width={206}
-                    priority
-                    onClick={() => router.push('/')}
-                    className={styles.logo}
-                />
-                <ul className={styles.menu}>
-                    <li
-                        onClick={() => router.push('/')}
-                        className={(pathname === '/') ? styles.active : ''}
-                    >
-                        Home
-                    </li>
-                    <li
-                        onClick={() => router.push('/services')}
-                        className={(pathname === '/services') ? styles.active : ''}
-                    >
-                        Services
-                    </li>
-                    <li
-                        onClick={() => router.push('/industries')}
-                        className={(pathname === '/industries') ? styles.active : ''}
-                    >
-                        Industries
-                    </li>
-                    <li
-                        onClick={() => router.push('/aboutUs')}
-                        className={(pathname === '/aboutUs') ? styles.active : ''}
-                    >
-                        About us
-                    </li>
-                    <li
-                        onClick={() => router.push('/contacts')}
-                    >
-                        <span>Contacts</span>
-                    </li>
-                </ul>
-                <Image
-                    src={menu}
+                    src={'/icons/menu.svg'}
                     width={40}
+                    height={40}
                     alt={'menu Cleaning company'}
                     onClick={() => setOpenMenu(!openMenu)}
                     className={styles.burger}
@@ -74,41 +82,25 @@ const Header = () => {
                         onClick={() => setOpenMenu(!openMenu)}
                     >
                         <Image
-                            src={x}
+                            src={'/icons/x.svg'}
                             width={24}
+                            height={24}
                             alt={'menu close'}
                         />
-                        <ul className={styles.burger_menu_list}>
-                            <li
-                                onClick={() => router.push('/')}
-                                className={(pathname === '/') ? styles.active : ''}
-                            >
-                                Home
-                            </li>
-                            <li
-                                onClick={() => router.push('/services')}
-                                className={(pathname === '/services') ? styles.active : ''}
-                            >
-                                Services
-                            </li>
-                            <li
-                                onClick={() => router.push('/industries')}
-                                className={(pathname === '/industries') ? styles.active : ''}
-                            >
-                                Industries
-                            </li>
-                            <li
-                                onClick={() => router.push('/aboutUs')}
-                                className={(pathname === '/aboutUs') ? styles.active : ''}
-                            >
-                                About us
-                            </li>
-                            <li
-                                onClick={() => router.push('/contacts')}
-                            >
-                                <span>Contacts</span>
-                            </li>
-                        </ul>
+                        <div className={styles.burger_menu_list}>
+                            {navLinks.map(item => (
+                                <Link href={item.url} key={item.name}>
+                                    <p className={(pathname === item.url) ? styles.active : ''}>
+                                        {item.name}
+                                    </p>
+                                </Link>
+                            ))}
+                            <Link href={'/contacts'}>
+                                <span>
+                                    Contacts
+                                </span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

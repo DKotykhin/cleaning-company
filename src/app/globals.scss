@@ -1,3 +1,5 @@
+@import "constants/constants.scss";
+
 html,
 body {
     padding: 0;
@@ -24,4 +26,22 @@ a {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+@media screen and (min-width: $full_bp) {
+}
+@media screen and (max-width: $tablet_bp) {
+}
+@media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+    .logo {
+        width: 120px;
+        height: 42px;
+    }
+    
+}
+@media screen and (max-width: $mobile_bp) {
+    .logo {
+        width: 73px;
+        height: 26px;
+    }
 }
