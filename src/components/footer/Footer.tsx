@@ -47,21 +47,21 @@ const Footer = () => {
                             <Image
                                 src={facebook}
                                 alt={'facebook icon'}
+                                width={24}
                             />
                         </Link>
                         <Link href={'https://google.com'} target='_blank'>
                             <Image
                                 src={instagram}
                                 alt={'instagram icon'}
+                                width={24}
                             />
                         </Link>
                     </div>
                     <div className={styles.phone}>
                         <Image
                             src={phone}
-                            alt={'phone icon'}
-                            priority
-                            onClick={() => router.push('/')}
+                            alt={'phone icon'}                           
                         />
                         <a href="tel:2958675950">+2958675950</a>
                     </div>
@@ -69,10 +69,24 @@ const Footer = () => {
                         <Image
                             src={mail}
                             alt={'mail icon'}
-                            priority
-                            onClick={() => router.push('/')}
                         />
                         <a href="mailto:pristine12@gmail.com">pristine12@gmail.com</a>
+                    </div>
+                    <div className={styles.socials_mobile}>
+                        <a href="tel:2958675950">
+                            <Image
+                                src={phone}
+                                alt={'phone icon'}
+                                width={24}
+                            />
+                        </a>
+                        <a href="mailto:pristine12@gmail.com">
+                            <Image
+                                src={mail}
+                                alt={'mail icon'}
+                                width={24}
+                            />
+                        </a>
                     </div>
                 </div>
             </div>

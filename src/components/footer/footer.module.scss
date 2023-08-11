@@ -2,50 +2,121 @@
 
 .footer {
     width: 100%;
-    background-color: #012239;
     height: 375px;
+    background-color: #012239;
+    @media (max-width: 1200px) {
+        height: 267px;
+    }
+    @media (max-width: 767px) {
+        height: 192px;
+    }
     .container {
-        max-width: 1440px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: $white;
+        max-width: 1440px;
+        margin: 0 auto;
         padding: 68px 40px;
+        color: $white;
+        @media (max-width: 1200px) {
+            padding: 61px 35px 49px;
+        }
+        @media (max-width: 767px) {
+            padding: 46px 20px;
+        }
         .logo {
             img {
                 cursor: pointer;
+                @media (max-width: 1200px) {
+                    width: 120px;
+                    height: 43px;
+                }
+                @media (max-width: 767px) {
+                    width: 73px;
+                    height: 26px;
+                }
             }
             p {
                 color: #c7c7c7;
                 font-size: 14px;
                 font-weight: 500;
                 margin-top: 20px;
+                @media (max-width: 1200px) {
+                    font-size: 12px;
+                    width: 120px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 8px;
+                    width: 88px;
+                    margin-top: 7px;
+                }
             }
         }
         .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             font-size: 22px;
             font-weight: 500;
             height: 170px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             cursor: pointer;
+            @media (max-width: 1200px) {
+                font-size: 16px;
+                height: 106px;
+            }
+            @media (max-width: 767px) {
+                font-size: 10px;
+                height: 62px;
+            }
         }
         .lastColumn {
-            height: 170px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 170px;
+            @media (max-width: 1200px) {
+                height: 106px;
+            }
+            @media (max-width: 767px) {
+                height: 62px;
+            }
             p {
                 font-size: 22px;
                 font-weight: 500;
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 10px;
+                }
             }
             .socials img {
                 margin-right: 19px;
+                @media (max-width: 767px) {
+                    margin-right: 8px;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            .socials_mobile {
+                @media (min-width: 1201px) {
+                    display: none;
+                }
+                img {
+                    margin-right: 19px;
+                    @media (max-width: 767px) {
+                        margin-right: 8px;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
             }
             .phone {
                 display: flex;
                 align-items: center;
+                @media (max-width: 1200px) {
+                    display: none;
+                }
                 a {
                     margin: 3px 0 0 13px;
                     font-size: 14px;
@@ -55,6 +126,9 @@
             .mail {
                 display: flex;
                 align-items: center;
+                @media (max-width: 1200px) {
+                    display: none;
+                }
                 a {
                     margin-left: 13px;
                     font-size: 14px;
@@ -65,14 +139,25 @@
     }
     .line {
         border: 1px solid $grey;
-        width: 95%;
+        max-width: 1360px;
         margin: 0 auto;
+        @media (max-width: 1360px) {
+            max-width: 95%;
+        }
     }
     .right {
-        color: #c7c7c7;
         text-align: center;
         font-size: 14px;
         font-weight: 500;
         margin: 24px 0;
+        color: #c7c7c7;
+        @media (max-width: 1200px) {
+            font-size: 12px;
+            margin: 18px 0;
+        }
+        @media (max-width: 767px) {
+            font-size: 8px;
+            margin: 11px 0;
+        }
     }
 }
