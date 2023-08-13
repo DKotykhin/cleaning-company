@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
@@ -9,7 +7,7 @@ import styles from './footer.module.scss';
 const Footer = () => {
 
     return (
-        <div className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href={'/'}>
@@ -96,7 +94,7 @@ const Footer = () => {
             <div className={styles.right}>
                 © 2023 Pristine. All Rights Reserved. Designed & Developed by WebXwiz
             </div>
-        </div>
+        </footer>
     );
 };
 

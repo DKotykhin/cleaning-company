@@ -32,7 +32,7 @@ const Header = () => {
     const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState(false);
 
-    const handleKeydown = (e: any) => {        
+    const handleKeydown = (e: { code: string }) => {
         if (e.code === 'Escape') setOpenMenu(false);
     };
     useEffect(() => {
@@ -42,8 +42,8 @@ const Header = () => {
     }, []);
 
     return (
-        <nav className={styles.header}>
-            <div className={styles.container}>
+        <header className={styles.header}>
+            <nav className={styles.container}>
                 <Link href={'/'}>
                     <Image
                         src={'/logo.svg'}
@@ -103,8 +103,8 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 };
 

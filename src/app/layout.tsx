@@ -25,7 +25,7 @@ const satoshi = localFont({
             path: '../fonts/Satoshi-Bold.woff2',
             weight: '700',
             style: 'normal',
-        },        
+        },
     ],
 });
 
@@ -39,15 +39,11 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <body className={satoshi.className}>
-                <header>
-                    <Header />
-                </header>
+                <Header />
                 <main style={{ flexGrow: 1 }}>
                     {children}
                 </main>
-                <footer>
-                    <Footer />
-                </footer>
+                <Footer />
             </body>
         </html>
     );
