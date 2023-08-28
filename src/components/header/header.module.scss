@@ -2,136 +2,36 @@
 
 .header {
     width: 100%;
-    background-color: #012239;
-    .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        max-width: 1440px;
-        height: 138px;
-        margin: 0 auto;
-        padding: 0 40px;
-        .burger {
-            display: none;
+        height: 48px;
+        margin: 33px 60px;
+        a {
+            flex-grow: 1;
         }
         .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style-type: none;
-            font-size: 22px;
-            font-weight: 500;
-            color: $white;
             a {
-                cursor: pointer;
-                margin-left: 60px;
-                white-space: nowrap;
-            }
-            a:last-child {
-                @include button;
-                width: 189px;
-                height: 47px;
-                span {
-                    width: 98px;
-                    font-size: 22px;
-                    font-weight: 700;
-                }
+                padding: 0 24px;
+                margin-left: 16px;
+                font-size: 16px;
+                color: $secondary;
+                font-weight: 500;
             }
             .active {
-                color: $light_blue;
+                font-weight: 900;
             }
         }
-        .burger_menu {
-            width: 282px;
-            height: 511px;
-            background-color: #ecfaff;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 18px;
-            .burger_container {
-                padding: 24px 47px;
-                img {
-                    cursor: pointer;
-                }
-            }
-            .burger_menu_list {
-                list-style-type: none;
-                color: $dark;
-                padding: 62px 0;
-                font-size: 18px;
-                font-weight: 700;
-                a {
-                    cursor: pointer;
-                    p {
-                        margin-bottom: 40px;
-                    }
-                }
-                a:last-child {
-                    @include button;
-                    width: 167px;
-                    height: 47px;
-                    margin-top: 81px;
-                    span {
-                        width: 86px;
-                        font-size: 22px;
-                        font-weight: 700;
-                        color: $white;
-                    }
-                }
-            }
-        }
-        .burger_menu_close {
-            display: none;
-        }
-        @media screen and (min-width: $full_bp) {
-            .burger_menu {
-                display: none;
-            }
-        }
-        @media screen and (max-width: $tablet_bp) {
-            .menu {
-                display: none;
-            }
-            .burger {
-                display: block;
-                cursor: pointer;
-            }
-        }
-        @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
-            height: 110px;
-            padding: 0 35px;
-        }
-        @media screen and (max-width: $mobile_bp) {
-            height: 69px;
-            padding: 0 20px;
-            .burger {
-                width: 28px;
-                height: 28px;
-            }
-            .burger_menu {
-                width: 167px;
-                height: 301px;
-                .burger_container {
-                    padding: 19px 21px;
-                }
-                .burger_menu_list {
-                    font-size: 12px;
-                    padding: 32px 0;
-                    a p {
-                        margin-bottom: 20px;
-                    }
-                    a:last-child {
-                        width: 114px;
-                        height: 32px;
-                        margin-top: 32px;
-                        span {
-                            font-size: 10px;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-        }
+    }
+
+    @media screen and (min-width: $full_bp) {
+    }
+    @media screen and (max-width: $tablet_bp) {
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

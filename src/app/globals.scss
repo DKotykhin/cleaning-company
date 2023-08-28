@@ -12,8 +12,18 @@ body {
 
 body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    background: radial-gradient(
+                93.4% 103.29% at 78.68% 64.84%,
+                rgba(0, 0, 0, 0) 0%,
+                #000 100%
+            )
+            no-repeat,
+        url(../../public/background.webp) center center/cover no-repeat;
+    height: 1024px;
+    @media screen and (min-width: 1550px) {
+        background-size: 100% 1024px;
+    }
 }
 
 a {
@@ -28,6 +38,7 @@ a {
     border: 0;
 }
 
+
 @media screen and (min-width: $full_bp) {
 }
 @media screen and (max-width: $tablet_bp) {
@@ -37,7 +48,6 @@ a {
         width: 120px;
         height: 42px;
     }
-    
 }
 @media screen and (max-width: $mobile_bp) {
     .logo {

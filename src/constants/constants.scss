@@ -1,22 +1,16 @@
-$white: #ffffff;
-$white_grey: #f7fcff;
-$light_blue: #64b6db;
-$blue: #238cbb;
-$deep_blue: #004874;
+$primary: #0397d7;
+$secondary: #ffffff;
 
-$grey: #777777;
-$dark_grey: #434343;
-$dark: #242424;
+$text-primary: #231f20;
+$text-secondary: #7e8b91;
 
-$blue_gray: #64b6db;
-$white_blue: #ecfaff;
-$dark_blue: #092b43;
-$footer: #011e32;
+$border: #d0d5d7;
+$background: #f7f8f8;
 
 @mixin button {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     background: $light_blue;
     border-radius: 30px;
     cursor: pointer;
@@ -24,4 +18,4 @@ $footer: #011e32;
 
 $full_bp: 1201px;
 $tablet_bp: 1200px;
-$mobile_bp: 767px
+$mobile_bp: 767px;

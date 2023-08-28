@@ -23,35 +23,38 @@ const navLinks = [
     },
     {
         name: 'About us',
-        url: '/aboutUs',
+        url: '/about',
+    },
+    {
+        name: 'Contact us',
+        url: '/contacts',
     },
 ];
 
 const Header = () => {
 
     const pathname = usePathname();
-    const [openMenu, setOpenMenu] = useState(false);
+    // const [openMenu, setOpenMenu] = useState(false);
 
-    const handleKeydown = (e: { code: string }) => {
-        if (e.code === 'Escape') setOpenMenu(false);
-    };
-    useEffect(() => {
-        window.addEventListener("keydown", handleKeydown);
+    // const handleKeydown = (e: { code: string }) => {
+    //     if (e.code === 'Escape') setOpenMenu(false);
+    // };
+    // useEffect(() => {
+    //     window.addEventListener("keydown", handleKeydown);
 
-        return () => window.removeEventListener("keydown", handleKeydown);
-    }, []);
+    //     return () => window.removeEventListener("keydown", handleKeydown);
+    // }, []);
 
     return (
         <header className={styles.header}>
-            <nav className={styles.container}>
+            <nav>
                 <Link href={'/'}>
                     <Image
                         src={'/logo.svg'}
-                        alt={'logo Cleaning company'}
-                        width={206}
-                        height={73}
-                        priority
-                        className='logo'
+                        alt={'Cleaning company logo'}
+                        width={200}
+                        height={48}
+                        priority                        
                     />
                 </Link>
                 <div className={styles.menu}>
@@ -61,48 +64,8 @@ const Header = () => {
                                 {item.name}
                             </span>
                         </Link>
-                    ))}
-                    <Link href={'/contacts'}>
-                        <span>
-                            Contacts
-                        </span>
-                    </Link>
-                </div>
-                <Image
-                    src={'/icons/menu.svg'}
-                    width={40}
-                    height={40}
-                    alt={'menu Cleaning company'}
-                    onClick={() => setOpenMenu(!openMenu)}
-                    className={styles.burger}
-                />
-                <div className={openMenu ? styles.burger_menu : styles.burger_menu_close}>
-                    <div
-                        className={styles.burger_container}
-                        onClick={() => setOpenMenu(!openMenu)}
-                    >
-                        <Image
-                            src={'/icons/x.svg'}
-                            width={24}
-                            height={24}
-                            alt={'menu close'}
-                        />
-                        <div className={styles.burger_menu_list}>
-                            {navLinks.map(item => (
-                                <Link href={item.url} key={item.name}>
-                                    <p className={(pathname === item.url) ? styles.active : ''}>
-                                        {item.name}
-                                    </p>
-                                </Link>
-                            ))}
-                            <Link href={'/contacts'}>
-                                <span>
-                                    Contacts
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+                    ))}                    
+                </div>                               
             </nav>
         </header>
     );
