@@ -1,0 +1,41 @@
+@import "constants/constants.scss";
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 80px 60px 0;
+    background-color: $secondary;
+    .title_box {
+        text-align: center;
+        width: 278px;
+        margin: 0 auto;
+        h2 {
+            color: $text-primary;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            margin-bottom: 16px;
+            span {
+                font-weight: 900;
+            }
+        }
+        .line {
+            height: 1px;
+            background-color: $border;
+            margin-bottom: 24px;
+        }
+    }
+    .form_box {
+        width: 100%;
+        max-width: 870px;
+        margin: 0 auto;
+        .subtitle {
+            font-size: 20px;
+            color: $text-primary;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}

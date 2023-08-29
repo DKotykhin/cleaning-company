@@ -9,15 +9,16 @@ const TopBlock = () => {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
-                <h1>Weaving <br />
-                    Dreams into <br />
-                    Pristine Realities
-                </h1>
-                <div className={styles.line}></div>
-                <h4>Where Cleanliness and Comfort Converge &ndash; Transforming Your Environment into a Haven of Immaculate Bliss</h4>
-                <div className={styles.buttons}>
-                    <Link href={'/services'}>See Services</Link>
-                    <Link href={'/industries'}>Learn More</Link>
+                <div className={styles.text_block}>
+                    <h1>
+                        Your trusted <br /> cleaning company <br /> partner
+                    </h1>
+                    <div className={styles.line}></div>
+                    <h4>Our company was established 15 years ago, but we always try to be even better</h4>
+                    <div className={styles.buttons}>
+                        <Link href={'/services'}>See Services</Link>
+                        <Link href={'/industries'}>Learn More</Link>
+                    </div>
                 </div>
             </div>
         </div>

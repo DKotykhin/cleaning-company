@@ -6,30 +6,9 @@ import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import Link from 'next/link';
 
-import styles from './header.module.scss';
+import { navLinks } from 'components/footer/Footer';
 
-const navLinks = [
-    {
-        name: 'Home',
-        url: '/',
-    },
-    {
-        name: 'Services',
-        url: '/services',
-    },
-    {
-        name: 'Industries',
-        url: '/industries',
-    },
-    {
-        name: 'About us',
-        url: '/about',
-    },
-    {
-        name: 'Contact us',
-        url: '/contacts',
-    },
-];
+import styles from './header.module.scss';
 
 const Header = () => {
 
