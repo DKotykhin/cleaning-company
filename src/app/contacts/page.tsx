@@ -1,8 +1,12 @@
 import React from 'react';
 
+import TopBlock from './components/topBlock/TopBlock';
+
 const ContactsPage = () => {
     return (
-        <div>Contacts Page</div>
+        <>
+            <TopBlock />
+        </>
     );
 };
 

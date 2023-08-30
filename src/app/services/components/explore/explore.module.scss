@@ -1,0 +1,105 @@
+@import "constants/constants.scss";
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 60px 61px;
+    background-color: $secondary;
+    margin-bottom: 16px;
+    .box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        h2 {
+            color: $text-primary;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            flex-shrink: 0;
+            padding: 0 24px;
+            span {
+                font-weight: 900;
+            }
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: $border;
+        }
+    }
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1320px;
+        gap: 24px; 
+        .service_card {
+            display: flex;
+            padding: 8px 8px 24px;
+            flex-direction: column;
+            gap: 24px;
+            flex: 1 0 0;
+            width: 424px;
+            margin-bottom: 24px;
+            border-radius: 16px;
+            background: $background;
+            max-width: 424px;
+            min-height: 628px;
+            h4 {
+                color: $text-primary;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: normal;
+                padding: 0 24px;
+            }
+            .subtitle {
+                color: $text-secondary;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                min-height: 60px;
+                padding: 0 24px;
+            }
+            .tag_box {
+                padding: 0 24px;
+                display: flex;
+                align-items: center;
+                .tag {
+                    color: $primary;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-left: 12px;
+                }
+            }
+            .button_box {
+                padding: 0 24px;
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: $border;
+                }
+                button {
+                    display: flex;
+                    height: 48px;
+                    padding: 0px 24px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    align-self: stretch;
+                    border-radius: 12px;
+                    border: 1px solid $primary;
+                    color: $primary;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: normal;
+                    width: 100%;
+                    margin-top: 24px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,14 @@
 import React from 'react';
 
+import TopBlock from './components/topBlock/TopBlock';
+import Explore from './components/explore/Explore';
+
 const ServicesPage = () => {
     return (
-        <div>Services Page</div>
+        <>
+            <TopBlock />
+            <Explore />
+        </>
     );
 };
 

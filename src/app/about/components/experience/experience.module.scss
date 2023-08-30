@@ -1,0 +1,54 @@
+@import "constants/constants.scss";
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+    background-color: $background;
+    .box {
+        display: flex;
+        padding: 48px;
+        .accordion_box {
+            margin-right: 48px;
+            h2 {
+                color: $text-primary;
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 60px;
+                flex-shrink: 0;
+                span {
+                    font-weight: 900;
+                }
+            }
+            .accordion {
+                padding: 16px;
+                margin-top: 24px;
+                border-radius: 12px;
+                border: 1px solid $border;
+                .accordion_item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    min-height: 27px;
+                    .accordion_title {
+                        font-size: 20px;
+                        color: $text-primary;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    img {
+                        cursor: pointer;
+                    }
+                }
+                .accordion_description {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: $text-primary;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

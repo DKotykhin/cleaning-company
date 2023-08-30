@@ -1,0 +1,94 @@
+@import "constants/constants.scss";
+
+.container {
+    width: 100%;
+    height: 1024px;
+    background: radial-gradient(
+                93.4% 103.29% at 78.68% 64.84%,
+                rgba(0, 0, 0, 0) 0%,
+                #000 100%
+            )
+            no-repeat,
+        url(../../../../../public/background.webp) center center/cover no-repeat;
+    .box {
+        max-width: 1440px;
+        height: 1024px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+        .text_block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 648px;
+            height: 320px;
+            p {
+                font-size: 16px;
+                color: $secondary;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 0.16px;
+                margin-bottom: 24px;
+            }
+            h1 {
+                font-size: 56px;
+                color: $secondary;
+                font-weight: 700;
+                line-height: 70px;
+                letter-spacing: 0.56px;
+            }
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: $secondary;
+                margin: 24px 0;
+            }
+            h4 {
+                font-size: 20px;
+                color: $secondary;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: justify;
+            }
+        }
+        .card_block {
+            display: flex;
+            gap: 40px;
+            > :first-child {
+                margin-top: 40px;
+            }
+            .card_wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    background-color: $secondary;
+                    padding: 16px;
+                    width: 200px;
+                    border-radius: 16px;
+                    .title {
+                        color: $text-primary;
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .subtitle {
+                        color: $text-secondary;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,16 @@
 import React from 'react';
 
+import TopBlock from './components/topBlock/TopBlock';
+import Place from './components/place/Place';
+import Industries from './components/industries/Industries';
+
 const IndustriesPage = () => {
     return (
-        <div>Industries Page</div>
+        <>
+            <TopBlock />
+            <Place />
+            <Industries />
+        </>
     );
 };
 

@@ -1,0 +1,31 @@
+@import "constants/constants.scss";
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 48px 60px 80px;
+    background-color: $secondary;
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            color: $text-primary;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 24px;
+        }
+        h4 {
+            width: 424px;
+            margin-bottom: 24px;
+            color: #242424;
+            text-align: center;            
+            font-size: 14px;            
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
