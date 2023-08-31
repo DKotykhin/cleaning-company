@@ -3,28 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 
-export const navLinks = [
-    {
-        name: 'Home',
-        url: '/',
-    },
-    {
-        name: 'Services',
-        url: '/services',
-    },
-    {
-        name: 'Industries',
-        url: '/industries',
-    },
-    {
-        name: 'About us',
-        url: '/about',
-    },
-    {
-        name: 'Contact us',
-        url: '/contacts',
-    },
-];
+import { navLinks } from 'constants/navLinks';
 
 import styles from './footer.module.scss';
 

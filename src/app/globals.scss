@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $background;
+    background-color: $secondary;
 }
 
 a {
@@ -27,6 +27,58 @@ a {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+.title {
+    font-size: 56px;
+    color: $secondary;
+    font-weight: 900;
+    line-height: 70px;
+    letter-spacing: 0.56px;
+}
+.subtitle {
+    font-size: 20px;
+    color: $secondary;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: justify;
+}
+.line-white {
+    width: 100%;
+    height: 1px;
+    background-color: $secondary;
+    margin: 24px 0;
+}
+.top-paragraph {
+    font-size: 16px;
+    color: $secondary;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    margin-bottom: 24px;
+}
+
+.primary-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 48px;
+    padding: 0px 24px;
+    align-items: center;
+    border-radius: 12px;
+    background: $primary;
+    box-shadow: 0px 8px 24px -4px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    color: $secondary;
+    font-weight: 500;
+    line-height: normal;
+    &:hover {
+        background-color: $secondary;
+        color: $primary;
+        border: 1px solid $primary;
+        transition: all 0.3s ease-out;
+    }
 }
 
 @media screen and (min-width: $full_bp) {

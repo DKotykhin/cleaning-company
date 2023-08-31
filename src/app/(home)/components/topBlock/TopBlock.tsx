@@ -10,11 +10,13 @@ const TopBlock = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
-                    <h1>
+                    <h1 className='title'>
                         Your trusted <br /> cleaning company <br /> partner
                     </h1>
-                    <div className={styles.line}></div>
-                    <h4>Our company was established 15 years ago, but we always try to be even better</h4>
+                    <div className='line-white'></div>
+                    <h4 className='subtitle'>
+                        Our company was established 15 years ago, but we always try to be even better
+                    </h4>
                     <div className={styles.buttons}>
                         <Link href={'/services'}>See Services</Link>
                         <Link href={'/industries'}>Learn More</Link>

@@ -7,14 +7,8 @@ $text-secondary: #7e8b91;
 $border: #d0d5d7;
 $background: #f7f8f8;
 
-@mixin button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $light_blue;
-    border-radius: 30px;
-    cursor: pointer;
-}
+$red-primary: #f6584e;
+
 
 $full_bp: 1201px;
 $tablet_bp: 1200px;

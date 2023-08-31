@@ -19,17 +19,17 @@ const satoshi = localFont({
         {
             path: '../fonts/Satoshi-Medium.woff2',
             weight: '500',
-            style: 'normal',
+            style: 'semi-bold',
         },
         {
             path: '../fonts/Satoshi-Bold.woff2',
             weight: '700',
-            style: 'normal',
+            style: 'bold',
         },
         {
             path: '../fonts/Satoshi-Black.woff2',
             weight: '900',
-            style: 'normal',
+            style: 'black',
         },
     ],
 });

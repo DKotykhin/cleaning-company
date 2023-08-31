@@ -8,12 +8,12 @@ const TopBlock = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
-                    <p>Industries</p>
-                    <h1>
+                    <p className='top-paragraph'>Industries</p>
+                    <h1 className='title'>
                         Our Industries
                     </h1>
-                    <div className={styles.line}></div>
-                    <h4>
+                    <div className='line-white'></div>
+                    <h4 className='subtitle'>
                     You can see our diligence and focus to details throughout all our industries in which we serve.
                     </h4>
                 </div>

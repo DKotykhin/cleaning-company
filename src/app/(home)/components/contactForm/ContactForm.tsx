@@ -12,6 +12,7 @@ const ContactForm = () => {
             <div className={styles.form_box}>
                 <p className={styles.subtitle}>Your Details</p>
             </div>
+            <div className={styles.separator}></div>
         </div>
     );
 };

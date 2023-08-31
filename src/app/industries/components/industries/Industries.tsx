@@ -68,7 +68,14 @@ const Industries = () => {
                 ))}
 
             </div>
-            <Link href={'/services'}>Order Service</Link>
+            <Link
+                href={'/services'}
+                className='primary-button'
+                style={{ margin: '0 auto 80px' }}
+            >
+                Order Service
+            </Link>
+            <div className={styles.separator}></div>
         </div>
     );
 };

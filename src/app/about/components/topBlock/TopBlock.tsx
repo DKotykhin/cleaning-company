@@ -8,12 +8,12 @@ const TopBlock = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
-                    <p>About us</p>
-                    <h1>
+                    <p className='top-paragraph'>About us</p>
+                    <h1 className='title'>
                         We can gift your <br /> area a new look.
                     </h1>
-                    <div className={styles.line}></div>
-                    <h4>
+                    <div className='line-white'></div>
+                    <h4 className='subtitle'>
                         We specialize in creating comfortable and spotless spaces according to your needs, We bring hygiene to every surface that our workers touch. Stop postponing cleaning every time and order our services now!
                     </h4>
                 </div>

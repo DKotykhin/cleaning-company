@@ -5,7 +5,6 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 60px 96px;
-    background-color: $secondary;
     .box {
         display: flex;
         align-items: center;
@@ -37,6 +36,7 @@
             height: 193px;
             padding: 24px;
             background-color: $background;
+            border-radius: 16px;
             h4 {
                 font-size: 20px;
                 color: $text-primary;

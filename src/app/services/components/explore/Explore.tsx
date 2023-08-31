@@ -85,6 +85,7 @@ const Explore = () => {
                     </div>
                 ))}
             </div>
+            <div className={styles.separator}></div>
         </div>
     );
 };

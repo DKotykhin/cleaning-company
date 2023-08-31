@@ -52,7 +52,13 @@ const Services = () => {
                         </div>
                     ))}
                 </div>
-                <Link href={'/services'}>See More</Link>
+                <Link
+                    href={'/services'}
+                    className='primary-button'
+                    style={{ margin: '0 auto' }}
+                >
+                    See More
+                </Link>
             </div>
         </div>
     );

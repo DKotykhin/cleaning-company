@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SendForm from '../sendForm/SendForm';
+
 import styles from './topBlock.module.scss';
 
 const TopBlock = () => {
@@ -8,15 +10,16 @@ const TopBlock = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
-                    <p>Contact us</p>
-                    <h1>
+                    <p className='top-paragraph'>Contact us</p>
+                    <h1 className='title'>
                         Ready for a Pristine <br /> facility? We&apos;re <br /> ready to clean!
                     </h1>
-                    <div className={styles.line}></div>
-                    <h4>
+                    <div className='line-white'></div>
+                    <h4 className='subtitle'>
                         We&apos;re available to assist and consult you anytime! Leave your message and receive a quick response.
                     </h4>
                 </div>
+                <SendForm />
             </div>
         </div>
     );
