@@ -26,14 +26,80 @@
         }
     }
     .form_box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
         width: 100%;
         max-width: 870px;
         margin: 0 auto;
+        margin-bottom: 80px;
         .subtitle {
             font-size: 20px;
             color: $text-primary;
             font-weight: 500;
             line-height: normal;
+        }
+        .form_inputBox {
+            display: flex;
+            > :first-child {
+                margin-right: 24px;
+            }
+            input {
+                background-color: $background;
+            }
+        }
+        .message_box {
+            width: 100%;
+            textarea {
+                resize: none;
+                padding: 16px;
+                width: 100%;
+                height: 160px;
+                border-radius: 12px;
+                border: 1px solid $border;
+                font-size: 16px;
+                font-weight: 500;
+                color: $text-secondary;
+                font-family: "Satoshi", sans-serif;
+                background-color: $background;
+            }
+            .active {
+                border: 1px solid $red-primary;
+            }
+            .error {
+                color: $red-primary;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            ::placeholder {
+                font-size: 16px;
+                font-weight: 500;
+                color: $text-secondary;
+            }
+        }
+        .button_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .urgency {
+                font-size: 20px;
+                color: $text-primary;
+                font-weight: 500;
+                line-height: normal;
+            }
+            .button {
+                width: 200px;
+                height: 56px;
+                padding: 0px 24px;
+                border-radius: 12px;
+                background: $primary;
+                box-shadow: 0px 8px 24px -4px rgba(0, 0, 0, 0.08);
+                color: $secondary;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+                cursor: pointer;
+            }
         }
     }
     .separator {

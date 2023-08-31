@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-
 import { useForm, Controller } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 import Image from "next/image";
 
@@ -17,6 +17,7 @@ interface IContactFormData {
     email: string,
     phone: string,
     message: string,
+    service: string,
 }
 
 const SendForm = () => {
@@ -26,10 +27,43 @@ const SendForm = () => {
         handleSubmit,
         formState: { errors, isValid },
         reset,
-    } = useForm<IContactFormData>(ContactFormValidation);
+    } = useForm<IContactFormData>(
+        {
+            ...ContactFormValidation,
+            defaultValues: {
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                message: "",
+                service: localStorage.getItem('serviceValue') || "",
+            },
+        });
 
-    const onSubmit = (data: IContactFormData): void => {
-        console.log(data);
+    const onSubmit = async (formData: IContactFormData): Promise<void> => {
+        // console.log(formData);
+        toast.info('Waiting for sending request...');
+        const { firstName, lastName, email, phone, message, service } = formData;
+        const data = {
+            userName: firstName + ' ' + lastName,
+            email,
+            message,
+            service,
+            phone,
+        };
+        await fetch('/api/send-request-email', {
+            method: 'POST',
+            body: JSON.stringify({ data })
+        })
+            .then(response => {
+                if (response.ok) {
+                    toast.success('Email successfully sent!');
+                    reset();
+                }
+            })
+            .catch(err => {
+                toast.error(`Can't send email. Check your internet connection`);
+            });
     };
 
     return (
@@ -59,7 +93,42 @@ const SendForm = () => {
                         error={errors.phone}
                     />
                 </div>
+                <div className={styles.select_box}>
+                    <Controller
+                        name="service"
+                        control={control}
+                        render={({ field }) => (
+                            <select
+                                {...field}
+                                placeholder='Select Service'
+                                className={errors.service ? styles.active : ''}
+                            >
+                                <option value="" disabled hidden>Select Service</option>
+                                <option value="Floor stripping & Waxing">Floor stripping & Waxing</option>
+                                <option value="Window & Exterior Washing">Window & Exterior Washing</option>
+                                <option value="Janitorial Service">Janitorial Service</option>
+                                <option value="Daily & steady Cleaning">Daily & steady Cleaning</option>
+                                <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
 
+                            </select>
+                        )}
+                    />
+                    <p className={styles.error}>{errors.service?.message}</p>
+                </div>
+                <div className={styles.message_box}>
+                    <Controller
+                        name="message"
+                        control={control}
+                        render={({ field }) => (
+                            <textarea
+                                {...field}
+                                placeholder='Your wishes'
+                                className={errors.message ? styles.active : ''}
+                            />
+                        )}
+                    />
+                    <p className={styles.error}>{errors.message?.message}</p>
+                </div>
                 <button type='submit' className={styles.button}>
                     <div className={styles.button_text}>
                         <span>Send</span>
@@ -71,7 +140,6 @@ const SendForm = () => {
                         />
                     </div>
                 </button>
-
             </form>
         </div>
     );

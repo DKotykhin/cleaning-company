@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 
 import styles from './explore.module.scss';
@@ -24,7 +25,7 @@ const serviceData = [
     {
         id: 3,
         url: '/services/service-3.webp',
-        title: 'Post-Construction Cleaning',
+        title: 'Janitorial Service',
         subtitle: 'Janitorial service is the cleaning and maintenance of commercial, industrial or institutional spaces. Our professionals perform such tasks:',
         tags: ['Dusting, vacuuming', 'Mopping, sanitizing', 'Waste disposal and other'],
     },
@@ -46,7 +47,11 @@ const serviceData = [
 
 const Explore = () => {
 
-    const handleClick = (data: string) => localStorage.setItem("serviceValue", data);
+    const router = useRouter();
+    const handleClick = (data: string) => {
+        localStorage.setItem("serviceValue", data);
+        router.push('/contacts');
+    };
 
     return (
         <div className={styles.container}>

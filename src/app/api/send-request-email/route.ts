@@ -11,13 +11,13 @@ export async function POST(req: Request) {
         subject: "Message from contact page",
         text: `message from ${userName}`,
         html: `
-            <h2>message from <strong>${userName}</strong></h2>
-            <h4>phone: <strong>${phone}</strong></h4>
+            <h2>message from ${userName}</h2>
+            <h4>phone: ${phone}</h4>
             <br />
-            <h3>Requested service: <strong>${service}</strong></h3>
+            <h3>Requested service: ${service}</h3>
             <br />
-            <h4>message:</h4>
-            <strong>${message}</strong>
+            <p>message:</p>
+            <p><strong>${message}</strong></p>
             <br />
             <hr />
         `,

@@ -19,6 +19,10 @@ const phone = yup
     .min(7, "Minimum 7 characters to fill")
     .required("Required field!");
 
+const service = yup
+    .string()
+    .required("Required field!");
+
 const message = yup
     .string()
     .min(5, "Minimum 5 characters to fill")
@@ -35,6 +39,7 @@ const contactSchema = yup.object({
     lastName: userName,
     email,
     phone,
+    service,
     message,
 });
 
@@ -47,14 +52,7 @@ export const HomePageFormValidation: Object = {
     resolver: yupResolver(homePageSchema),
     mode: "onChange",
 };
-export const ContactFormValidation: Object = {
-    defaultValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-    },
+export const ContactFormValidation: Object = {    
     resolver: yupResolver(contactSchema),
     mode: "onChange",
 };

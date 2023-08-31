@@ -3,10 +3,13 @@ import { ReactNode } from "react";
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 
+import { ToastContainer, Flip } from 'react-toastify';
+
 import { generalMetaData } from 'metadata/metadata';
 import Header from 'components/header/Header';
 import Footer from 'components/footer/Footer';
 
+import 'react-toastify/dist/ReactToastify.css';
 import './globals.scss';
 
 const satoshi = localFont({
@@ -49,6 +52,16 @@ export default function RootLayout({
                     {children}
                 </main>
                 <Footer />
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar
+                    transition={Flip}
+                    closeOnClick
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </body>
         </html>
     );

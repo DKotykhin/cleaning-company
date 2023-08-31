@@ -4,7 +4,7 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Satoshi, Inter, Roboto,
+    font-family: -apple-system, BlinkMacSystemFont, Inter, Roboto,
         Segoe UI, Oxygen, Ubuntu, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -73,6 +73,7 @@ a {
     color: $secondary;
     font-weight: 500;
     line-height: normal;
+    transition: all 0.3s ease-out;
     &:hover {
         background-color: $secondary;
         color: $primary;
