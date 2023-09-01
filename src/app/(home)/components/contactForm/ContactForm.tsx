@@ -85,7 +85,21 @@ const ContactForm = () => {
                     <p className={styles.error}>{errors.message?.message}</p>
                 </div>
                 <div className={styles.button_box}>
-                    <p className={styles.urgency}>Urgency of Reply </p>
+                    <div className={styles.progress_box}>
+                        <p className={styles.urgency}>Urgency of Reply </p>
+                        <div className={styles.progress}>
+                            {workTime ?
+                                <div className={styles.fill_full}></div>
+                                :
+                                <div className={styles.fill_part}></div>
+                            }
+                        </div>
+                        <div className={styles.text_box}>
+                            <span>Normal</span>
+                            <span>Urgent</span>
+                            <span>Very Urgent</span>
+                        </div>
+                    </div>
                     <button type='submit' className={styles.button}>Send</button>
                 </div>
             </form>

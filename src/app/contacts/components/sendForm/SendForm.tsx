@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { EmailInput, UserNameInput, PhoneInput } from 'components/inputs/_index';
 import { ContactFormValidation } from 'validation/userValidation';
+import { serviceData } from 'app/services/components/explore/serviceData';
 
 import styles from './sendForm.module.scss';
 
@@ -99,17 +100,13 @@ const SendForm = () => {
                         control={control}
                         render={({ field }) => (
                             <select
-                                {...field}
-                                placeholder='Select Service'
+                                {...field}                                
                                 className={errors.service ? styles.active : ''}
                             >
                                 <option value="" disabled hidden>Select Service</option>
-                                <option value="Floor stripping & Waxing">Floor stripping & Waxing</option>
-                                <option value="Window & Exterior Washing">Window & Exterior Washing</option>
-                                <option value="Janitorial Service">Janitorial Service</option>
-                                <option value="Daily & steady Cleaning">Daily & steady Cleaning</option>
-                                <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
-
+                                {serviceData.map(item => (
+                                    <option value={item.title} key={item.id}>{item.title}</option>
+                                ))}
                             </select>
                         )}
                     />
