@@ -12,17 +12,29 @@
         url(../../../../../public/background.webp) center center/cover no-repeat;
     .box {
         max-width: 1440px;
-        height: 1024px;
+        height: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        padding-left: 60px;
+        padding: 0 60px;
         .text_block {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 648px;
-            height: 222px;            
+            max-width: 648px;
+            width: 100%;
+            gap: 24px;            
         }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        height: 713px;
+        .box {
+            padding: 0 35px;
+            .text_block {
+                gap: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

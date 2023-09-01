@@ -12,24 +12,26 @@
         url(../../../../../public/background.webp) center center/cover no-repeat;
     .box {
         max-width: 1440px;
-        height: 1024px;
+        height: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        padding-left: 60px;
+        padding: 0 60px;
         .text_block {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 648px;
-            height: 388px;
+            // height: 399px;
+            gap: 24px;
         }
         .buttons {
             display: flex;
             color: $secondary;
             font-size: 16px;
             font-weight: 500;
-            margin-top: 24px;
+            gap: 24px;
+            // margin-top: 24px;
             :first-child {
                 display: flex;
                 flex-direction: column;
@@ -41,7 +43,6 @@
                 border-radius: 12px;
                 background: $primary;
                 box-shadow: 0px 8px 24px -4px rgba(0, 0, 0, 0.08);
-                margin-right: 24px;
             }
             :last-child {
                 display: flex;
@@ -56,5 +57,19 @@
                 box-shadow: 0px 8px 24px -4px rgba(0, 0, 0, 0.08);
             }
         }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        height: 713px;
+        .box {
+            padding: 0 35px;
+            .text_block {
+                gap: 20px;
+            }
+            .buttons {
+                gap: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

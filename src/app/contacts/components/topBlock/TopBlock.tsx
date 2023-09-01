@@ -21,6 +21,7 @@ const TopBlock = () => {
                 </div>
                 <SendForm />
             </div>
+            <div className={styles.separator}></div>
         </div>
     );
 };

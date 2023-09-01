@@ -36,11 +36,11 @@ const Services = () => {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
-                <h2>Our <span>Pristine</span> Services</h2>
+                <h2 className='block-title'>Our <span>Pristine</span> Services</h2>
                 <div className={styles.line}></div>
                 <div className={styles.services}>
                     {serviceData.map(item => (
-                        <div key={item.id} className={styles.service_box}>
+                        <div key={item.id} className={styles.service_card}>
                             <Image
                                 src={item.url}
                                 alt={'service'}

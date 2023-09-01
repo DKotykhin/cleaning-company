@@ -68,8 +68,10 @@ const Values = () => {
                 />
             </div>
             <div className={styles.box}>
-                <h2>These are our <span>Core Values</span></h2>
-                <div className={styles.line}></div>
+                <div className={styles.title_box}>
+                    <h2>These are our <span>Core Values</span></h2>
+                    <div className={styles.line}></div>
+                </div>
                 {
                     valuesData.map(item => (
                         <div key={item.id} className={styles.value}>

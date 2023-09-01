@@ -12,10 +12,13 @@
             flex-grow: 1;
         }
         .menu {
+            display: flex;
+            align-items: center;
             font-size: 16px;
             color: $text-secondary;
             font-weight: 500;
             line-height: normal;
+            height: 48px;
             a {
                 padding: 0 24px;
                 margin-left: 16px;
@@ -41,9 +44,18 @@
         }
     }
 
-    @media screen and (min-width: $full_bp) {
-    }
     @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 35px;
+            .menu {
+                margin-top: 20px;
+                a {
+                    margin-left: 0;
+                }
+            }
+        }
     }
     @media screen and (max-width: $mobile_bp) {
     }

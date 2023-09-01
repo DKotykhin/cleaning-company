@@ -43,7 +43,7 @@ const Partners = () => {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
-                <h2>Our <span>Business Partners</span></h2>
+                <h2 className='block-title'>Our <span>Business Partners</span></h2>
                 <div className={styles.line}></div>
                 <div className={styles.icon_box}>
                     {iconsUrl.map(item => (

@@ -11,19 +11,44 @@
             no-repeat,
         url(../../../../../public/background.webp) center center/cover no-repeat;
     .box {
-        max-width: 1440px;
-        height: 1024px;
-        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1440px;
+        height: 100%;
+        margin: 0 auto;
         padding: 0 60px;
         .text_block {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 542px;
-            height: 362px;                        
+            max-width: 648px;
+            width: 100%;
+            gap: 24px;
+            margin-right: 60px;                        
         }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        height: 713px;
+        margin-bottom: 470px;
+        .box {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 35px;
+            height: 1102px;
+            padding-top: 161px;
+            .text_block {
+                gap: 20px;
+                margin-bottom: 80px;
+            }
+        }
+        .separator {
+            width: 100%;
+            height: 16px;
+            background-color: $background;
+            margin-top: 80px;
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

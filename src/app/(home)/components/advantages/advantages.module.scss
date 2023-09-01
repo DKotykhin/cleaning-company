@@ -12,15 +12,8 @@
             padding: 0 60px;
             margin-bottom: 24px;
             h2 {
-                color: $text-primary;
-                text-align: center;
-                font-size: 48px;
-                font-weight: 400;
-                line-height: 60px;
+                line-height: 28px;
                 flex-shrink: 0;
-                span {
-                    font-weight: 900;
-                }
             }
             .line {
                 width: 100%;
@@ -33,9 +26,9 @@
             display: flex;
             flex-wrap: wrap;
             max-width: 1440px;
-            .image {            
+            .image {
                 position: relative;
-                height: 253px;
+                max-height: 253px;
                 p {
                     position: absolute;
                     left: 24px;
@@ -47,5 +40,25 @@
                 }
             }
         }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        .box {
+            .images_box {
+                .image {
+                    height: 136px;
+                    img {
+                        height: 136px;
+                        width: auto; 
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.16px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

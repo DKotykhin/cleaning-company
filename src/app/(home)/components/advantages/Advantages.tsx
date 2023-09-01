@@ -72,7 +72,7 @@ const Advantages = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.title_box}>
-                    <h2>Our <span>Advantages</span></h2>
+                    <h2 className='block-title'>Our <span>Advantages</span></h2>
                     <div className={styles.line}></div>
                 </div>
                 <div className={styles.images_box}>
