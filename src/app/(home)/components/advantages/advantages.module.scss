@@ -10,6 +10,7 @@
             display: flex;
             align-items: center;
             padding: 0 60px;
+            min-height: 60px;
             margin-bottom: 24px;
             h2 {
                 line-height: 28px;
@@ -24,11 +25,15 @@
         }
         .images_box {
             display: flex;
-            flex-wrap: wrap;
             max-width: 1440px;
+            width: 100%;
             .image {
                 position: relative;
-                max-height: 253px;
+                margin-bottom: -5px;
+                img {
+                    height: auto;
+                    width: 100%;
+                }
                 p {
                     position: absolute;
                     left: 24px;
@@ -37,23 +42,32 @@
                     color: $secondary;
                     font-weight: 400;
                     line-height: normal;
+                    white-space: nowrap;
+                    @media screen and (max-width: 1440px) {
+                        width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }
     }
     @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
         .box {
+            .title_box {
+                min-height: auto;
+                margin-bottom: 20px;
+            }
             .images_box {
                 .image {
-                    height: 136px;
-                    img {
-                        height: 136px;
-                        width: auto; 
-                    }
                     p {
                         font-size: 16px;
                         line-height: 24px;
                         letter-spacing: 0.16px;
+                        width: 150px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }

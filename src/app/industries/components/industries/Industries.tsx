@@ -47,9 +47,9 @@ const industriesData = [
 const Industries = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.box}>
+            <div className={styles.text_box}>
                 <div className={styles.line}></div>
-                <h2><span>Industries</span> we services</h2>
+                <h2 className='block-title'><span>Industries</span> we services</h2>
                 <div className={styles.line}></div>
             </div>
             <div className={styles.industries}>
@@ -71,7 +71,7 @@ const Industries = () => {
             <Link
                 href={'/services'}
                 className='primary-button'
-                style={{ margin: '0 auto 80px' }}
+                style={{ margin: '24px auto 80px' }}
             >
                 Order Service
             </Link>

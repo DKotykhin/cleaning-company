@@ -8,7 +8,7 @@ const Place = () => {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
-                <h2>
+                <h2 className='block-title'>
                     Pristine transforms your place into fresh and comfortable space.
                 </h2>
                 <h4>

@@ -53,7 +53,7 @@ const ContactForm = () => {
     return (
         <div className={styles.container}>
             <div className={styles.title_box}>
-                <h2>Contact <span>Us</span></h2>
+                <h2 className='block-title'>Contact <span>Us</span></h2>
                 <div className={styles.line}></div>
             </div>
             <form className={styles.form_box} onSubmit={handleSubmit(onSubmit)}>

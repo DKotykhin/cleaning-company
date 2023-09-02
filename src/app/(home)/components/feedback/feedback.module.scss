@@ -10,10 +10,7 @@
         align-items: center;
         margin-bottom: 95px;
         h2 {
-            color: $text-primary;
-            font-size: 48px;
             font-weight: 700;
-            line-height: 60px;
             flex-shrink: 0;
             padding: 0 24px;
         }
@@ -22,5 +19,12 @@
             height: 1px;
             background-color: $border;
         }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        .box {
+            margin-bottom: 20px;
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

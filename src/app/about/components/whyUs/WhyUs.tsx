@@ -30,7 +30,7 @@ const WhyUs = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
-                <h2>Why <span>Us</span></h2>
+                <h2 className='block-title'>Why <span>Us</span></h2>
                 <div className={styles.line}></div>
             </div>
             <div className={styles.services}>

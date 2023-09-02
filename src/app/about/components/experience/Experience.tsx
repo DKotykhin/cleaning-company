@@ -22,7 +22,7 @@ const Experience = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.accordion_box}>
-                    <h2>
+                    <h2 className='block-title'>
                         All our employees are <span>highly-trained</span> with years of experience.
                     </h2>
                     {accordionData.map(item => (
@@ -43,6 +43,7 @@ const Experience = () => {
                     width={588}
                     height={599}
                     priority
+                    className={styles.image}
                 />
             </div>
         </div>

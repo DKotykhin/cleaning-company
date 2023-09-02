@@ -1,7 +1,5 @@
 "use client";
 
-import React from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -52,17 +50,18 @@ const clientCardData = [
 ];
 
 const Feedback = () => {
+
     return (
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
-                <h2>Our Clients&apos; Feedback</h2>
+                <h2 className='block-title'>Our Clients&apos; Feedback</h2>
                 <div className={styles.line}></div>
             </div>
             <Swiper
                 modules={[Pagination, A11y, EffectCoverflow]}
                 spaceBetween={24}
-                slidesPerView={3}
+                slidesPerView={1}
                 pagination={{ clickable: true }}
                 initialSlide={2}
                 effect={'coverflow'}
@@ -73,6 +72,14 @@ const Feedback = () => {
                     depth: 100,
                     modifier: 1,
                     slideShadows: true,
+                }}
+                breakpoints={{
+                    998: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    }
                 }}
             >
                 {clientCardData.map(item => (

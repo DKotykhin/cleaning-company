@@ -21,7 +21,7 @@ const Explore = () => {
         <div className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
-                <h2>Explore in our <span>services</span></h2>
+                <h2 className='block-title'>Explore in our <span>services</span></h2>
                 <div className={styles.line}></div>
             </div>
             <div className={styles.services}>
@@ -33,6 +33,7 @@ const Explore = () => {
                             width={408}
                             height={240}
                             priority
+                            className={styles.image}
                         />
                         <h4>{item.title}</h4>
                         <p className={styles.subtitle}>{item.subtitle}</p>

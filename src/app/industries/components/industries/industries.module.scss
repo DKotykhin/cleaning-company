@@ -5,20 +5,13 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 60px;
-    .box {
+    .text_box {
         display: flex;
         align-items: center;
         margin-bottom: 24px;
         h2 {
-            color: $text-primary;
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 60px;
             flex-shrink: 0;
             padding: 0 24px;
-            span {
-                font-weight: 900;
-            }
         }
         .line {
             width: 100%;
@@ -30,16 +23,15 @@
         display: flex;
         flex-wrap: wrap;
         max-width: 1320px;
+        gap: 24px;
         .industries_card {
             display: flex;
             padding: 8px 24px 24px;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             gap: 24px;
             flex: 1 0 0;
             width: 424px;
-            margin-bottom: 24px;
             border-radius: 16px;
             background: $background;
             h4 {
@@ -62,5 +54,28 @@
         width: 100%;
         height: 16px;
         background-color: $background;
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        padding: 0 35px;
+        .text_box {
+            padding: 0 60px;
+            margin-bottom: 20px;
+        }
+        .industries {
+            gap: 20px;
+            .industries_card {
+                width: 339px;
+                h4 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                img {
+                    height: auto;
+                    width: 323px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }

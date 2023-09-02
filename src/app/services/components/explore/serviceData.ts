@@ -52,7 +52,7 @@ export const serviceData = [
         url: "/services/service-5.webp",
         title: "Post-Construction Cleaning",
         subtitle:
-            "Daily cleaning includes regular cleaning tasks to maintain cleanliness and hygiene. It is essential for any space to create a pleasant environment. Some of the advantages are:",
+            "You need a post-construction cleaning if you’ve had a construction, renovation or remodeling of something. It includes:",
         tags: [
             "Removal of dust and construction details",
             "Improving air quality",

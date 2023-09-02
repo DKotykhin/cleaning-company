@@ -10,21 +10,25 @@
     .box {
         display: flex;
         padding: 48px;
+        gap: 48px;
         .accordion_box {
-            margin-right: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
             h2 {
-                color: $text-primary;
-                font-size: 48px;
-                font-weight: 400;
-                line-height: 60px;
                 flex-shrink: 0;
                 span {
                     font-weight: 900;
                 }
+                @media screen and (min-width: $tablet_bp) and (max-width: 1400px) {
+                    font-size: 28px;
+                    font-weight: 400;
+                    line-height: 36px;
+                }
             }
             .accordion {
                 padding: 16px;
-                margin-top: 24px;
                 border-radius: 12px;
                 border: 1px solid $border;
                 .accordion_item {
@@ -51,5 +55,36 @@
                 }
             }
         }
+    }
+    @media screen and (min-width: $tablet_bp) and (max-width: 1400px) {
+        .box {
+            gap: 20px;
+            padding: 48px 0;
+            .accordion_box {
+                gap: 20px;
+                h2 {
+                    font-size: 28px;
+                    font-weight: 400;
+                    line-height: 36px;
+                }
+            }
+            .image {
+                height: 550px;
+                width: auto;
+            }
+        }
+    }
+    @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        .box {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            .image {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile_bp) {
     }
 }
