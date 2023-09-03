@@ -31,11 +31,12 @@
             font-size: 20px;
             font-weight: 500;
             line-height: normal;
+            width: 100%;
         }
-        .button {
+        img {
             border-radius: 80px;
             max-height: 120px;
-            background: rgba(0, 0, 0, 0.24);
+            // background: rgba(0, 0, 0, 0.24);
             cursor: pointer;
         }
     }
@@ -44,7 +45,6 @@
             height: 340px;
             .title {
                 top: 20px;
-                width: 100%;
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 28px;
@@ -57,15 +57,33 @@
                 line-height: 20px;
                 letter-spacing: 0.14px;
             }
-            .button {
-                max-height: 64px;
-                img {
-                    width: 64px;
-                    height: 64px;
-                }
+            img {
+                width: 64px;
+                height: 64px;
             }
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        .wrapper {
+            height: 192px;
+            .title {
+                top: 20px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.16px;
+            }
+            .subtitle {
+                top: 50px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.12px;
+            }
+            img {
+                width: 48x;
+                height: 48px;
+            }
+        }
     }
 }

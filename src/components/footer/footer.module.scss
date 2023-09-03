@@ -18,7 +18,7 @@
             color: $text-secondary;
             font-weight: 500;
             line-height: normal;
-            height: 48px;
+            min-height: 48px;
             a {
                 padding: 0 24px;
                 margin-left: 16px;
@@ -58,5 +58,19 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 35px;
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 20px;
+                gap: 20px;
+                a {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }

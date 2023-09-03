@@ -57,22 +57,53 @@
             .title_box {
                 min-height: auto;
                 margin-bottom: 20px;
+                padding: 0 35px;
             }
             .images_box {
                 .image {
                     p {
+                        left: 12px;
+                        bottom: 12px;
                         font-size: 16px;
                         line-height: 24px;
                         letter-spacing: 0.16px;
-                        width: 150px;
-                        white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                    }
+                    .image_wide {
+                        width: 350px;
+                    }
+                    .image_regular {
+                        width: 170px;
                     }
                 }
             }
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        .box {
+            .title_box {
+                min-height: auto;
+                margin-bottom: 17px;
+                padding: 0 20px;
+            }
+            .images_box {
+                .image {
+                    p {
+                        left: 8px;
+                        bottom: 12px;
+                        font-size: 8px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .image_wide {
+                        width: 160px;
+                    }
+                    .image_regular {
+                        width: 78px;
+                    }
+                }
+            }
+        }
     }
 }

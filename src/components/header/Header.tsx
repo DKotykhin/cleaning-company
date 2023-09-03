@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
@@ -13,16 +13,9 @@ import styles from './header.module.scss';
 const Header = () => {
 
     const pathname = usePathname();
-    // const [openMenu, setOpenMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
-    // const handleKeydown = (e: { code: string }) => {
-    //     if (e.code === 'Escape') setOpenMenu(false);
-    // };
-    // useEffect(() => {
-    //     window.addEventListener("keydown", handleKeydown);
-
-    //     return () => window.removeEventListener("keydown", handleKeydown);
-    // }, []);
+    const handleClick = () => setOpenMenu(prev => !prev);
 
     return (
         <header className={styles.header}>
@@ -33,7 +26,7 @@ const Header = () => {
                         alt={'Cleaning company logo'}
                         width={200}
                         height={48}
-                        priority                        
+                        priority
                     />
                 </Link>
                 <div className={styles.menu}>
@@ -43,8 +36,41 @@ const Header = () => {
                                 {item.name}
                             </span>
                         </Link>
-                    ))}                    
-                </div>                               
+                    ))}
+                </div>
+                <div className={styles.burger_menu}>
+                    <Image
+                        src={'/icons/burger.svg'}
+                        alt={'burger'}
+                        width={32}
+                        height={32}
+                        onClick={handleClick}
+                    />
+                    {openMenu &&
+                        <div className={styles.burger_menu_box}>
+                            <div className={styles.burger_menu_header}>
+                                <Image
+                                    src={'/logo.svg'}
+                                    alt={'Cleaning company logo'}
+                                    width={200}
+                                    height={48}
+                                    priority
+                                    className={styles.burger_menu_logo}
+                                />
+                                <Image
+                                    src={'/icons/close.svg'}
+                                    alt={'close'}
+                                    width={32}
+                                    height={32}
+                                    onClick={handleClick}
+                                />
+                            </div>
+                            {navLinks.map(item => (
+                                <Link href={item.url} key={item.name} onClick={handleClick}>{item.name}</Link>
+                            ))}
+                        </div>
+                    }
+                </div>
             </nav>
         </header>
     );

@@ -21,10 +21,16 @@
         }
     }
     @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        padding: 80px 35px;
         .box {
             margin-bottom: 20px;
+            padding: 0 60px;
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        padding: 80px 20px;
+        .box {
+            margin-bottom: 20px;
+        }
     }
 }

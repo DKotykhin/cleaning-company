@@ -10,7 +10,7 @@ const TopBlock = () => {
                 <div className={styles.text_block}>
                     <p className='top-paragraph'>Our services</p>
                     <h1 className='title'>
-                        Our Cleaning <br /> Services
+                        Our Cleaning Services
                     </h1>
                     <div className='line-white'></div>
                     <h4 className='subtitle'>

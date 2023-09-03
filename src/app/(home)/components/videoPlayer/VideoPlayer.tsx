@@ -14,14 +14,12 @@ const VideoPlayer = () => {
     const hasWindow = useWindow();
 
     const customPlayButton = (
-        <div className={styles.button}>
-            <Image
-                src={'/play.svg'}
-                alt={'play'}
-                width={120}
-                height={120}
-            />
-        </div>
+        <Image
+            src={'/play.svg'}
+            alt={'play'}
+            width={120}
+            height={120}
+        />
     );
 
     return hasWindow ? (

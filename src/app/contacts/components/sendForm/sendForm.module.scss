@@ -19,7 +19,6 @@
                 margin-right: 24px;
             }
         }
-
         .button {
             width: 121px;
             height: 48px;
@@ -101,5 +100,17 @@
         max-width: 698px;
     }
     @media screen and (max-width: $mobile_bp) {
+        max-width: 698px;
+        padding: 16px;
+        .form {            
+            gap: 16px;
+            .form_box {
+                flex-direction: column;
+                gap: 16px;
+                > :first-child {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

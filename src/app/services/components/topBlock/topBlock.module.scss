@@ -36,5 +36,12 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        height: 453px;
+        .box {
+            padding: 0 20px;
+            .text_block {
+                gap: 20px;
+            }
+        }
     }
 }

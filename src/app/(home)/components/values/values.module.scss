@@ -39,11 +39,14 @@
         .value {
             display: flex;
             align-items: center;
+            gap: 16px;
+            img {
+                margin: 16px;
+            }
             p {
                 font-size: 20px;
                 color: $secondary;
                 font-weight: 500;
-                margin-left: 16px;
             }
         }
     }
@@ -56,8 +59,7 @@
             }
         }
         .box {
-            padding: 35px;
-            gap: 0;
+            padding: 35px;            
             .title_box {
                 h2 {
                     font-size: 20px;
@@ -65,7 +67,10 @@
                 }
             }
             .value {
-                margin: 0;
+                gap: 8px;
+                img {
+                    margin: 4px;
+                }
                 p {
                     font-size: 16px;
                     margin-left: 0;
@@ -76,5 +81,33 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        .triangle {
+            top: -1px;
+            img {
+                height: 18px;
+                width: auto;
+            }
+        }
+        .box {
+            padding: 20px;            
+            .title_box {
+                h2 {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            .value {
+                gap: 8px;
+                img {
+                    margin: 0;
+                }
+                p {
+                    font-size: 16px;
+                    margin-left: 0;
+                    line-height: 24px;
+                    letter-spacing: 0.16px;
+                }
+            }
+        }
     }
 }

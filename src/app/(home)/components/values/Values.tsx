@@ -7,37 +7,37 @@ import styles from './values.module.scss';
 const valuesData = [
     {
         id: 1,
-        url: '/icons/values/value-1.svg',
+        url: '/icons/values/usersThree.svg',
         text: 'The company exists to serve its customers, employees and owners.',
     },
     {
         id: 2,
-        url: '/icons/values/value-2.svg',
+        url: '/icons/values/handshake.svg',
         text: 'We always go above promises.',
     },
     {
         id: 3,
-        url: '/icons/values/value-3.svg',
+        url: '/icons/values/lightbulb.svg',
         text: 'Excellence is a standard that we follow.',
     },
     {
         id: 4,
-        url: '/icons/values/value-4.svg',
+        url: '/icons/values/crown.svg',
         text: 'We have a win-win attitude.',
     },
     {
         id: 5,
-        url: '/icons/values/value-5.svg',
+        url: '/icons/values/checkCircle.svg',
         text: 'We’re always in touch and ready to assist you.',
     },
     {
         id: 6,
-        url: '/icons/values/value-6.svg',
+        url: '/icons/values/gearSix.svg',
         text: 'We embrace new technologies.',
     },
     {
         id: 7,
-        url: '/icons/values/value-7.svg',
+        url: '/icons/values/smiley.svg',
         text: 'Integrity and trust drive us.',
     },
 ];
@@ -48,8 +48,8 @@ const ValueItem = ({ url, text }: { url: string, text: string }) => {
             <Image
                 src={url}
                 alt={'value'}
-                width={80}
-                height={80}
+                width={48}
+                height={48}
             />
             <p>{text}</p>
         </>

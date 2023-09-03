@@ -11,7 +11,7 @@ const TopBlock = () => {
             <div className={styles.box}>
                 <div className={styles.text_block}>
                     <h1 className='title'>
-                        Your trusted <br /> cleaning company <br /> partner
+                        Your trusted cleaning company partner
                     </h1>
                     <div className='line-white'></div>
                     <h4 className='subtitle'>

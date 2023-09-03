@@ -143,6 +143,7 @@
         background-color: $background;
     }
     @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+        padding: 80px 35px 0;
         .form_box {
             gap: 20px;
             .button_box {
@@ -151,5 +152,38 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        padding: 80px 20px 0;
+        .form_box {
+            gap: 20px;
+            .subtitle {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.16px;
+            }
+            .form_inputBox {
+                flex-direction: column;
+                gap: 20px;
+                > :first-child {
+                    margin-right: 0;
+                }
+            }
+            .button_box {
+                flex-direction: column;
+                gap: 20px;
+                .progress_box {
+                    .urgency {
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.16px;
+                    }
+                    .progress {                        
+                        margin: 4px 0;
+                    }
+                }
+                .button {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

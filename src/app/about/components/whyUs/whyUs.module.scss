@@ -26,7 +26,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 424px;
+            max-width: 424px;
             // height: 193px;
             padding: 24px;
             background-color: $background;
@@ -69,6 +69,11 @@
     }
     @media screen and (max-width: $mobile_bp) {
         padding: 80px 20px;
+        .box {
+            h2 {
+                padding: 0 16px;
+            }
+        }
         .services {
             flex-direction: column;
             align-items: center;

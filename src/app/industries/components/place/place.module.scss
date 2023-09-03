@@ -42,5 +42,19 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        padding: 80px 20px;
+        .box {
+            text-align: left;
+            h2 {                   
+                margin-bottom: 12px;
+            }
+            h4 {
+                width: 100%;
+                margin-bottom: 34px;
+            }
+            img {
+                border-radius: 16px;
+            }
+        }
     }
 }

@@ -77,5 +77,29 @@
         }
     }
     @media screen and (max-width: $mobile_bp) {
+        padding: 0 20px;
+        .text_box {
+            margin-bottom: 20px;
+            h2 {
+                padding: 0 16px;
+            }
+        }
+        .industries {
+            gap: 20px;
+            .industries_card {
+                width: 339px;
+                padding: 8px 20px 20px;
+                gap: 8px;
+                h4 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-top: 12px;
+                }
+                img {
+                    height: auto;
+                    width: 323px;
+                }
+            }
+        }
     }
 }

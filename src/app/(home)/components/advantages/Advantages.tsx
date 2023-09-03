@@ -93,7 +93,7 @@ const Advantages = () => {
                                         height={253}
                                         priority
                                     />
-                                    <p style={item.width === 720 ? { width: '330px' } : {}}>
+                                    <p className={item.width === 720 ? styles.image_wide : styles.image_regular}>
                                         {item.text}
                                     </p>
                                 </div>
