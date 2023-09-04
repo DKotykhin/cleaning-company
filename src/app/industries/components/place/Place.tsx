@@ -6,7 +6,7 @@ import styles from './place.module.scss';
 
 const Place = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <h2 className='block-title'>
                     Pristine transforms your place into fresh and comfortable space.
@@ -22,7 +22,7 @@ const Place = () => {
                     priority
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

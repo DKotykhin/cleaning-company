@@ -41,7 +41,7 @@ const iconsUrl = [
 
 const Partners = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <h2 className='block-title'>Our <span>Business Partners</span></h2>
                 <div className={styles.line}></div>
@@ -58,7 +58,7 @@ const Partners = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

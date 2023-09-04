@@ -5,7 +5,7 @@ import styles from './topBlock.module.scss';
 const TopBlock = () => {
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
                     <p className='top-paragraph'>About us</p>
@@ -40,7 +40,7 @@ const TopBlock = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

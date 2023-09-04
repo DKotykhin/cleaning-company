@@ -7,7 +7,7 @@ import styles from './topBlock.module.scss';
 const TopBlock = () => {
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.text_block}>
                     <p className='top-paragraph'>Contact us</p>
@@ -22,7 +22,7 @@ const TopBlock = () => {
                 <SendForm />
             </div>
             <div className={styles.separator}></div>
-        </div>
+        </section>
     );
 };
 

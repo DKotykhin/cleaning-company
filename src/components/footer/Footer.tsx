@@ -21,13 +21,13 @@ const Footer = () => {
                         priority
                     />
                 </Link>
-                <div className={styles.menu}>
+                <nav className={styles.menu}>
                     {navLinks.map(item => (
                         <Link href={item.url} key={item.name}>
                             {item.name}
                         </Link>
                     ))}
-                </div>
+                </nav>
             </div>
             <div className={styles.last_box}>
                 <div className={styles.text_box}>

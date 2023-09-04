@@ -58,7 +58,7 @@ const ValueItem = ({ url, text }: { url: string, text: string }) => {
 
 const Values = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.triangle}>
                 <Image
                     src={'/icons/triangle-white.svg'}
@@ -81,7 +81,7 @@ const Values = () => {
                 }
 
             </div>
-        </div>
+        </section>
     );
 };
 

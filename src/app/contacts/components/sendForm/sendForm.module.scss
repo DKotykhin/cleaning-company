@@ -1,7 +1,6 @@
 @import "constants/constants.scss";
 
 .container {
-    max-width: 536px;
     width: 100%;
     min-height: 519px;
     padding: 24px;
@@ -80,7 +79,7 @@
                 line-height: 20px;
                 color: $text-primary;
                 // color: $text-secondary;                
-            }        
+            }       
             .active {
                 border: 1px solid $red-primary;
             }
@@ -97,10 +96,9 @@
         }
     }
     @media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
-        max-width: 698px;
+        
     }
-    @media screen and (max-width: $mobile_bp) {
-        max-width: 698px;
+    @media screen and (max-width: $mobile_bp) {       
         padding: 16px;
         .form {            
             gap: 16px;

@@ -22,7 +22,7 @@
     .services {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         // justify-content: center;
         max-width: 1320px;
         gap: 24px;
@@ -158,6 +158,7 @@
         }
         .services {
             gap: 20px;
+            justify-content: center;
             .service_card {
                 max-width: 339px;
                 .image {

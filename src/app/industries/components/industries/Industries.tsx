@@ -46,7 +46,7 @@ const industriesData = [
 
 const Industries = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.text_box}>
                 <div className={styles.line}></div>
                 <h2 className='block-title'><span>Industries</span> we services</h2>
@@ -76,7 +76,7 @@ const Industries = () => {
                 Order Service
             </Link>
             <div className={styles.separator}></div>
-        </div>
+        </section>
     );
 };
 

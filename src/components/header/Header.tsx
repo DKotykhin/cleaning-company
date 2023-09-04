@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
@@ -14,6 +14,17 @@ const Header = () => {
 
     const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState(false);
+
+    useEffect(() => {
+        const offset = window.innerWidth - document.body.offsetWidth + 'px';
+        if (openMenu) {
+            document.body.style.overflowY = 'hidden';
+            document.body.style.paddingRight = offset;
+        } else {
+            document.body.style.overflowY = 'unset';
+            document.body.style.paddingRight = '0px';
+        }
+    }, [openMenu]);
 
     const handleClick = () => setOpenMenu(prev => !prev);
 

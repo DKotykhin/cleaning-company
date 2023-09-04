@@ -23,7 +23,7 @@ const VideoPlayer = () => {
     );
 
     return hasWindow ? (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.wrapper}>
                 <p className={styles.title}>The path to success begins with cleanliness</p>
                 <p className={styles.subtitle}>Pristine can help you with any kind of pollution!</p>
@@ -36,7 +36,7 @@ const VideoPlayer = () => {
                     height="100%"
                 />
             </div>
-        </div>
+        </section>
     ) : null;
 };
 

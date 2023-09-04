@@ -55,6 +55,9 @@
                 }
             }
         }
+        .resized_image {
+            display: none;
+        }
     }
     @media screen and (min-width: $tablet_bp) and (max-width: 1400px) {
         .box {
@@ -81,6 +84,10 @@
             gap: 20px;
             padding: 20px;
             .image {
+                display: none;
+            }
+            .resized_image {
+                display: block;
                 height: auto;
                 width: 100%;
             }
@@ -93,6 +100,10 @@
             gap: 20px;
             padding: 16px;
             .image {
+                display: none;
+            }
+            .resized_image {
+                display: block;
                 height: auto;
                 width: 100%;
             }

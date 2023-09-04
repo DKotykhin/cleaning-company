@@ -75,7 +75,7 @@ const advantagesData = [
 
 const Advantages = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.title_box}>
                     <h2 className='block-title'>Our <span>Advantages</span></h2>
@@ -102,7 +102,7 @@ const Advantages = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

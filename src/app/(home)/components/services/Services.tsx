@@ -34,7 +34,7 @@ const serviceData = [
 
 const Services = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <h2 className='block-title'>Our <span>Pristine</span> Services</h2>
                 <div className={styles.line}></div>
@@ -60,7 +60,7 @@ const Services = () => {
                     See More
                 </Link>
             </div>
-        </div>
+        </section>
     );
 };
 

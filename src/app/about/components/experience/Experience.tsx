@@ -19,7 +19,7 @@ const Experience = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.accordion_box}>
                     <h2 className='block-title'>
@@ -45,8 +45,16 @@ const Experience = () => {
                     priority
                     className={styles.image}
                 />
+                <Image
+                    src={'/hands-cleaning-resize.webp'}
+                    alt={'cleaning'}
+                    width={658}
+                    height={444}
+                    priority
+                    className={styles.resized_image}
+                />
             </div>
-        </div>
+        </section>
     );
 };
 

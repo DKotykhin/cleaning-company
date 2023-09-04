@@ -52,7 +52,7 @@ const clientCardData = [
 const Feedback = () => {
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
                 <h2 className='block-title'>Our Clients&apos; Feedback</h2>
@@ -96,7 +96,7 @@ const Feedback = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </section>
     );
 };
 

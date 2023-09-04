@@ -27,7 +27,7 @@ const whyUsData = [
 
 const WhyUs = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
                 <h2 className='block-title'>Why <span>Us</span></h2>
@@ -47,7 +47,7 @@ const WhyUs = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

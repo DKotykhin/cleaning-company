@@ -51,7 +51,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.title_box}>
                 <h2 className='block-title'>Contact <span>Us</span></h2>
                 <div className={styles.line}></div>
@@ -104,7 +104,7 @@ const ContactForm = () => {
                 </div>
             </form>
             <div className={styles.separator}></div>
-        </div>
+        </section>
     );
 };
 

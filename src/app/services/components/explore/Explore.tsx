@@ -18,7 +18,7 @@ const Explore = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.line}></div>
                 <h2 className='block-title'>Explore in our <span>services</span></h2>
@@ -56,7 +56,7 @@ const Explore = () => {
                 ))}
             </div>
             <div className={styles.separator}></div>
-        </div>
+        </section>
     );
 };
 
