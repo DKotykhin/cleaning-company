@@ -18,7 +18,7 @@ const TopBlock = () => {
                         Our company was established 15 years ago, but we always try to be even better
                     </h4>
                     <div className={styles.buttons}>
-                        <Link href={'/services'}>See Services</Link>
+                        <Link href={'/services/#firstService'}>See Services</Link>
                         <Link href={'/industries'}>Learn More</Link>
                     </div>
                 </div>
