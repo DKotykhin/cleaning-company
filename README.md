@@ -1,5 +1,7 @@
 # Cleaning company
 
+![Logo](https://main--splendid-platypus-670577.netlify.app/logo.svg)
+
 ## Description
 
 visit card application for cleaning company
@@ -30,6 +32,10 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+or
+
+Open [deploy-link](https://main--splendid-platypus-670577.netlify.app)
 
 ## Author
 
