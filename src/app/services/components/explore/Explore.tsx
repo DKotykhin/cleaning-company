@@ -13,7 +13,9 @@ const Explore = () => {
 
     const router = useRouter();
     const handleClick = (data: string) => {
-        localStorage.setItem("serviceValue", data);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem("serviceValue", data);
+        }
         router.push('/contacts');
     };
 

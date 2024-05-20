@@ -37,7 +37,7 @@ const SendForm = () => {
                 email: "",
                 phone: "",
                 message: "",
-                service: localStorage.getItem('serviceValue') || "",
+                service: typeof window !== 'undefined'? localStorage.getItem('serviceValue') || "" : "",
             },
         });
 
